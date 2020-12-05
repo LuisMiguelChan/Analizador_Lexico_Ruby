@@ -30,7 +30,7 @@ def t_END(t):
     r'end'
     return t
 def t_VARIABLE(t):
-    r'[a-zA-Z0-9]*=|[a-zA-Z0-9]*\s='
+    r'[x][^\w]|[y][^\w]|sum[^\w]|res[^\w]|div[^\w]|mult[^\w]'
     return t
 def t_PRINT(t):
     r'print'

@@ -46,7 +46,7 @@ def t_ELSE(t):
     return t
 
 def t_newline(t):
-    r'\n+'
+    r'\n'
     t.lexer.lineno += len(t.value)
 def t_error(t):
     print("Caracter ilegal '%s'"%t.value[0])
@@ -59,7 +59,7 @@ def t_espacio(t):
     r"\s"
     pass
 def t_STRING(t):
-    r'\w|:'
+    r'\w+|:'
     return t
 
 lexer = lex.lex()
